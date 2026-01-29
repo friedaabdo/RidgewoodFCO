@@ -1,35 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
+//hashrouter aka router is a big tag that we wrap the whole app in to create routing env
+//routes is the argument/component where we specify the routes we want to have
+//route is the individual route/route that we wrap within routes component
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
+import { Home } from './Pages/home'
+import { About_Us } from './Pages/about_us'
+import { Order } from './Pages/order'
+import { Contact_Us } from './Pages/contact_us'
+import { NavBar } from './Components/NavBar'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <Router>
+      <div className="app-header">
+        <img src="/src/assets/logo-placeholder.png" alt="RFCO logo" className="logo" />
+        <div className="navbar-wrapper">
+          <NavBar />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className="routes-container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about_us" element={<About_Us />} />
+          <Route path="/order" element={<Order />} />
+          <Route path="/contact_us" element={<Contact_Us />} />
+        </Routes>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </Router>
   )
+
 }
 
 export default App
