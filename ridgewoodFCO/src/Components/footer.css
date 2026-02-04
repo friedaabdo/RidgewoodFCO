@@ -1,0 +1,17 @@
+/* footer should be sticky at the bottom */
+.footer {
+    display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #1a1a1a;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+}
+.socials {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    gap: 1em;
+}

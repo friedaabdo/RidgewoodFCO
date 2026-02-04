@@ -1,0 +1,30 @@
+.carousel-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-image {
+  height: 400px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.carousel-container .carousel-caption {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  bottom: 0;
+  padding: 2rem 1rem;
+}
+
+.carousel-container .carousel-caption h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.carousel-container .carousel-caption p {
+  font-size: 1rem;
+  margin: 0;
+}

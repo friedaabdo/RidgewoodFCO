@@ -1,4 +1,4 @@
-// import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 //hashrouter aka router is a big tag that we wrap the whole app in to create routing env
 //routes is the argument/component where we specify the routes we want to have
@@ -9,6 +9,7 @@ import { About_Us } from './Pages/about_us'
 import { Order } from './Pages/order'
 import { Contact_Us } from './Pages/contact_us'
 import { NavBar } from './Components/NavBar'
+import { Footer } from './Components/footer'
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/contact_us" element={<Contact_Us />} />
         </Routes>
       </div>
+      <Footer />
     </Router>
   )
 
